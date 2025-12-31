@@ -1,18 +1,92 @@
-# Vue 3 + TypeScript + Vite
+# Amazon Max Front
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Sistema de gerenciamento comercial para cadastro e controle de clientes, produtos, orçamentos e usuários.
 
-## Recommended IDE Setup
+## Tecnologias
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- **Vue 3** - Framework JavaScript progressivo
+- **TypeScript** - Tipagem estática
+- **Vite** - Build tool e dev server
+- **Tailwind CSS** - Framework CSS utilitário
+- **Vue Router** - Roteamento SPA
+- **Axios** - Cliente HTTP
+- **Vuelidate** - Validação de formulários
+- **jsPDF** - Geração de PDFs
+- **XLSX** - Exportação para Excel
+- **Luxon** - Manipulação de datas
+- **SQLite** - Banco de dados local (offline)
 
-## Type Support For `.vue` Imports in TS
+### Plataformas
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- **Web** - Aplicação SPA
+- **Mobile** - Android/iOS via Capacitor
+- **Desktop** - Windows/macOS/Linux via Tauri
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Funcionalidades
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- Autenticação de usuários com controle de acesso por roles (admin/vendedor)
+- Cadastro e consulta de clientes
+- Cadastro e consulta de produtos
+- Criação e gerenciamento de orçamentos
+- Geração de relatórios em PDF
+- Exportação de dados para Excel
+- Suporte offline com sincronização
+- Validação de CPF/CNPJ
+
+## Requisitos
+
+- Node.js 18+
+- npm ou yarn
+
+## Instalação
+
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
+
+# Build para produção
+npm run build
+```
+
+## Scripts Disponíveis
+
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera build de produção |
+| `npm run preview` | Preview do build de produção |
+| `npm run tauri` | Inicia em modo Tauri (desktop) |
+| `npm run tauri:build` | Build para desktop |
+| `npm run build:capacitor` | Build para mobile (Android) |
+
+## Estrutura do Projeto
+
+```
+src/
+├── api/              # Configuração de API e comunicação
+├── Componentes/      # Componentes Vue reutilizáveis
+│   ├── Esqueleto/    # Layout (Cabeçalho, Rodapé)
+│   ├── Modais/       # Componentes de modal
+│   └── Outros/       # Botões, Cards, Tabelas, Paginação
+├── Paginas/          # Páginas da aplicação
+│   ├── Autenticacao/ # Login e conexão
+│   ├── Cadastrar/    # Formulários de cadastro
+│   ├── Consulta/     # Telas de listagem
+│   ├── Relatorio/    # Relatórios
+│   └── Senha/        # Recuperação de senha
+├── router/           # Configuração de rotas
+├── sql/              # Banco de dados local e entidades
+├── utils/            # Funções utilitárias
+└── assets/           # Recursos estáticos
+```
+
+## IDE Recomendada
+
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+## Licença
+
+Projeto privado - Todos os direitos reservados.
